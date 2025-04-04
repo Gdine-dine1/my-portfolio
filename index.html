@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Personal portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5a04379dc7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo.png" alt="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About<a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark"></i>
+            </ul>
+            <i class="fa-solid fa-bars"></i>
+        </nav>
+        <div class="header-text">
+            <p>Web Designer</p>
+            <h1>Hi,I'm <span>Geraldine</span><br>Gicovi from Nairobi,Kenya</h1>
+        </div>
+    </div>
+    <!--about-->
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="background.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Creative web designer passionate about crafting user-friendly and visually appealing digital experiences.
+                         I bring ideas to life with clean code and a keen eye for detail.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')"> skills</p>
+                        <p class="tab-links" onclick="opentab('experience')"> Experience</p>
+                        <p class="tab-links" onclick="opentab('education')"> Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+        
+                            <li><span>Database Management</span><BR>Manipulating an creating databases</BR></li>
+                            <li><span>Web Development</span><BR>Web app Development</BR></li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - current</span><BR>Currectly i am a student and am gainig alot of experience from various website online and competitions</BR></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025</span><BR> web desighn at power learn project</BR></li>
+                            <li><span>2022-todate</span><BR>Information Technology at JKUAT</BR></li>
+                            <li><span>2024</span><BR>Cloud computing at IBM</BR></li>
+
+                        </ul>
+                    </div>
+                
+                
+                </div>
+            </div>
+        </div>
+    </div>
+<!--services-->
+<div id="services">
+    <div class="container"></div>
+    <h1 class="sub-title">My services</h1>
+    <div class="services-list">
+        <div>
+            <i class="fa-solid fa-file-code"></i>
+            <h2>Web design</h2>
+            <p>I believe in a user-centered approach to web design, blending creativity with strategic 
+                planning to build functional, engaging, and visually compelling websites.</p>
+            <a href="#">Learn more</a>
+
+        </div>
+        <div>
+            <i class="fa-solid fa-database"></i>
+            <h2>database management</h2>
+            <p>My expertise in database management includes [mention specific skills like database design, SQL, data optimization,
+                 data migration, etc.] to create robust and scalable data solutions.</p>
+            <a href="#">Learn more</a>
+            
+        </div>
+    </div>
+
+</div>
+<!--portfolio-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="image1.jpeg" >
+                <div class="layer">
+                    <h3>The web</h3>
+                    <p>The World Wide Web (WWW or the Web) is an information system that allows users to access and share content over the internet through websites and web pages,
+                         using a user-friendly interface and the Hypertext Transfer Protocol (HTTP). </p>
+                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image2.jpeg" >
+                <div class="layer">
+                    <h3>Databases</h3>
+                    <p>Databases are organized collections of data, typically stored electronically, that allow for efficient storage, retrieval,
+                         and management of information, enabling applications to access and manipulate data for various purposes.  </p>
+                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">see more</a>
+    </div>
+
+</div>
+<!--contact-->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>geradinegicovi@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>0748653881</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-telegram"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></i></a>
+                </div>
+                <a href="pic.jpg" download class="btn btn2">Download cv</a>
+            </div>
+            <div class="contact-right">
+                <form action="">
+                    <input type="text"name="Name" placeholder="Your Name" required>
+                    <input type="email"name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="Submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+
+    }
+
+</script>
+    
+</body>
+</html>
